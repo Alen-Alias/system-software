@@ -1,0 +1,9 @@
+MUL START   1000
+**  LDA ALPHA
+**  MUL BETA
+**  STA GAMMA
+ALPHA   WORD    2
+BETA    WORD    2
+GAMMA   RESW    1
+num1    BYTE    C'ABC'
+**  END **

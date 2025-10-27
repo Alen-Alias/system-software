@@ -1,0 +1,8 @@
+SAMPLE	START	1000
+**	 . EX1	NI,N2
+**	LDA	NI
+**	STA	N2
+**	CLEAR	C
+N1	RESW	1
+N2	RESW	1
+**	END	**
