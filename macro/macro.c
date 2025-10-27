@@ -18,7 +18,7 @@ void main()
         if(strcmp(mne,"MACRO")==0)
         {
             fprintf(nam,"%s\n",label);
-            fseek(nam,SEEK_SET,0);
+            rewind(nam);
             fprintf(def,"%s\t%s\n",label,op);
             fscanf(in,"%s %s %s", label,mne,op);
             while(strcmp(mne,"MEND")!=0)
@@ -56,10 +56,10 @@ void main()
                         fprintf(arg,"\n");
                     }
                 }
-                fseek(def,SEEK_SET,0);
+                rewind(def);
                 fprintf(out,"**\t . %s\t%s\n",mne,op);
                 fscanf(def,"%s%s",mne1,op1);
-                fseek(arg,SEEK_SET,0);
+                rewind(arg);
                 while(strcmp(mne1,"MEND")!=0)
                 {
                     if(op1[0]=='?')
